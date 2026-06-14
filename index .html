@@ -1,0 +1,267 @@
+<!--
+AI-assisted project:
+Initial idea and structure were created with AI support and then manually customized.
+Final version: personalized CV portfolio with JavaScript login logic in a single HTML file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amina Gubaydullina | Creative Portfolio</title>
+  <meta name="description" content="Personal CV portfolio of Amina Gubaydullina">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="page-bg"></div>
+
+  <main id="loginScreen" class="login-screen">
+    <section class="login-card">
+      <div class="login-badge">Portfolio Access</div>
+      <h1>Welcome Back</h1>
+      <p class="login-subtitle">Sign in to view the portfolio</p>
+
+      <form id="loginForm" novalidate>
+        <label class="input-label" for="username">Username</label>
+        <div class="input-wrap">
+          <span class="input-icon">👤</span>
+          <input id="username" type="text" placeholder="Enter username">
+        </div>
+
+        <label class="input-label" for="password">Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">🔒</span>
+          <input id="password" type="password" placeholder="Enter password">
+        </div>
+
+        <button type="submit" class="primary-btn">Sign In</button>
+
+        <p class="demo-text">Demo credentials: test / test</p>
+        <p id="loginError" class="error-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="portfolio" class="portfolio hidden">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+
+        <div>
+          <p class="brand-title">Amina Portfolio</p>
+          <p class="brand-subtitle">Creative creator & future analyst</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button id="themeToggle" class="icon-btn" type="button">🌙</button>
+        <button id="logoutBtn" class="logout-btn" type="button">↩ Logout</button>
+      </div>
+    </header>
+
+    <section class="hero reveal">
+      <div class="hero-text">
+        <span class="hero-chip">Student • Media • Analytics • Creativity</span>
+
+        <h1>Amina Gubaydullina</h1>
+        <h2>Creative creator and future analyst</h2>
+
+        <p class="hero-description">
+          Student from Tashkent with strong interest in media production, technology,
+          communication, digital projects and analytical thinking.
+        </p>
+
+        <div class="hero-highlights">
+          <div class="highlight-card">
+            <span>🎓</span>
+            <p>RANEPA Saint Petersburg — admitted on a full budget scholarship</p>
+          </div>
+
+          <div class="highlight-card">
+            <span>💙</span>
+            <p>IT Park University — studying with a 25% grant</p>
+          </div>
+
+          <div class="highlight-card">
+            <span>🌍</span>
+            <p>Selected for an internship program in Hungary</p>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <button id="downloadBtn" class="primary-btn" type="button">Download CV</button>
+          <a href="#contact" class="secondary-btn">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <div class="avatar-core">
+            <span>AG</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card reveal">
+      <div class="section-title">
+        <span>✨</span>
+        <h3>About Me</h3>
+      </div>
+
+      <p>
+        I see myself in the future as a creative creator and analyst.
+        I am interested in media production, communications, technology and modern digital projects.
+      </p>
+
+      <p>
+        From 2014 to 2019 I was professionally involved in ballroom dancing and participated
+        in international competitions in Uzbekistan, where I regularly won prize places.
+      </p>
+
+      <p>
+        I was also a prize winner in school olympiads in mathematics, Russian,
+        English and biology.
+      </p>
+    </section>
+
+    <section id="experience" class="card reveal">
+      <div class="section-title">
+        <span>🏢</span>
+        <h3>Experience</h3>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Gerry Weber Boutique</h4>
+            <p class="timeline-role">Customer Communication Assistant</p>
+            <p>
+              Worked with clients in social media, communicated using scripts and improved sales skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Volunteer Activity</h4>
+            <p class="timeline-role">Events and teamwork</p>
+            <p>
+              Participated in volunteering, hackathons and active university projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card reveal">
+      <div class="section-title">
+        <span>💡</span>
+        <h3>Skills</h3>
+      </div>
+
+      <div class="skills-tags">
+        <span>Communication</span>
+        <span>Creative Thinking</span>
+        <span>Media Production</span>
+        <span>Content Creation</span>
+        <span>Marketing</span>
+        <span>Analytics</span>
+        <span>Teamwork</span>
+        <span>Leadership</span>
+        <span>English</span>
+        <span>Public Speaking</span>
+      </div>
+    </section>
+
+    <section id="achievements" class="card reveal">
+      <div class="section-title">
+        <span>🏆</span>
+        <h3>Achievements</h3>
+      </div>
+
+      <div class="achievement-grid">
+        <div class="achievement-card">
+          <h4>President Tech Award</h4>
+          <p>Certificate for active participation and innovative contribution.</p>
+        </div>
+
+        <div class="achievement-card">
+          <h4>ICPC Uzbekistan 2025</h4>
+          <p>Honorable Mention participant.</p>
+        </div>
+
+        <div class="achievement-card">
+          <h4>ICT Week Uzbekistan</h4>
+          <p>Certificate of participation and contribution.</p>
+        </div>
+
+        <div class="achievement-card">
+          <h4>PROWEB</h4>
+          <p>Completed an Internet Marketing course.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card reveal">
+      <div class="section-title">
+        <span>📩</span>
+        <h3>Contact</h3>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span>📍</span>
+          <div>
+            <h4>Location</h4>
+            <p>Tashkent, Uzbekistan</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span>📞</span>
+          <div>
+            <h4>Phone</h4>
+            <p>+998971177050</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span>💬</span>
+          <div>
+            <h4>Telegram</h4>
+            <p>@amllna_g</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span>📷</span>
+          <div>
+            <h4>Instagram</h4>
+            <p>amllna_g</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
